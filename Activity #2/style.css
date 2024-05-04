@@ -1,0 +1,23 @@
+.container {
+    text-align: center;
+    font-family: 'Arial', san-serif;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: powderblue;
+}
+
+.result {
+    margin-top: 20px;
+}
