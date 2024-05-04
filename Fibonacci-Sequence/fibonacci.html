@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+<title>Fibonacci Sequence</title>
+<style type="text/css">
+    .fib{
+        margin-top: 200px;
+        margin-left: 400px;
+        margin-bottom: 200px;
+        border: 2px gray solid;
+        padding: 10px 20px;
+        width: 500px;
+        text-align: center;
+        box-shadow: 5px 10px gray;
+        font-family: 'Poppins';
+        font-size: 15px;
+    }
+    input{
+        padding: 5px 10px;
+        font-family: 'Poppins';
+    }
+    button{
+        margin-top: 15px;
+        padding: 5px 10px;
+        font-family: 'Poppins';
+    }
+</style>
+<script>
+    function generateFibonacci() {
+        var terms = parseInt(document.getElementById("terms").value);
+
+        if (Number.isInteger(terms) && terms > 0 && terms < 100) {
+            var fibonacciSequence = "";
+            var a = 0, b = 1;
+            for (var i = 0; i < terms; i++) {
+                fibonacciSequence += a + "<br>";
+                var temp = a;
+                a = b;
+                b = temp + b;
+            }
+            document.getElementById("output").innerHTML = "Fibonacci Sequence:<br>" + fibonacciSequence;
+        } else {
+            alert("Please enter a valid integer less than 100.");
+        }
+    }
+</script>
+</head>
+<body>
+    <div class="fib">
+        <h1>Fibonacci Sequence Generator</h1>
+        <label for="terms">Enter the number of terms:</label>
+        <input type="number" id="terms">
+        <br>
+        <button onclick="generateFibonacci()">Generate Fibonacci Sequence</button>
+        <br>
+        <p id="output"></p>
+    </div>
+</body>
+</html>
