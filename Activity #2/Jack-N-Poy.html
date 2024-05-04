@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rock Paper Scissors</h1>
+        <div class="options">
+            <button onclick="play('rock')"><i style="font-size: 125px;" class="fa fa-hand-rock-o" aria-hidden="true"></i></button>
+            <button onclick="play('paper')"><i style="font-size: 125px;" class="fa fa-hand-paper-o" aria-hidden="true"></i></button>
+            <button onclick="play('scissors')"><i style="font-size: 125px;" class="fa fa-hand-scissors-o fa-rotate-90" aria-hidden="true"></i></button>
+        </div>
+        <div class="result">
+            <h2 id="player">Choose an option to play!</h2>
+	    <h2 id="computer"></h2>
+	    <h1 id="result"></h1>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
